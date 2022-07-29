@@ -3,7 +3,7 @@
 exports[`has no unexpected changes 1`] = `
 Array [
   <select
-    className="Select-sc-1lkyg9e-0 how-many-samples-are-in-each-mtdna-haplogroup-for-each-nuclear-ancestry-population__HaplogroupOrAncestrySelector-dzc7cx-1 gKNBxc"
+    className="Select-sc-1lkyg9e-0 how-many-samples-are-in-each-mtdna-haplogroup-for-each-nuclear-ancestry-population__HaplogroupOrAncestrySelector-sc-dzc7cx-1 fkWiff"
     id="haplogroup-selected"
     onChange={[Function]}
     value="All"
@@ -164,7 +164,7 @@ Array [
     </optgroup>
   </select>,
   <select
-    className="Select-sc-1lkyg9e-0 how-many-samples-are-in-each-mtdna-haplogroup-for-each-nuclear-ancestry-population__HaplogroupOrAncestrySelector-dzc7cx-1 gKNBxc"
+    className="Select-sc-1lkyg9e-0 how-many-samples-are-in-each-mtdna-haplogroup-for-each-nuclear-ancestry-population__HaplogroupOrAncestrySelector-sc-dzc7cx-1 fkWiff"
     id="ancestry-selected"
     onChange={[Function]}
     value="All"
@@ -230,7 +230,7 @@ Array [
     </optgroup>
   </select>,
   <table
-    className="Table__BaseTable-sc-7fgtt2-0 how-many-samples-are-in-each-mtdna-haplogroup-for-each-nuclear-ancestry-population__HaplogroupAndAncestryBaseTable-dzc7cx-0 bWKGZn"
+    className="Table__BaseTable-sc-7fgtt2-0 how-many-samples-are-in-each-mtdna-haplogroup-for-each-nuclear-ancestry-population__HaplogroupAndAncestryBaseTable-sc-dzc7cx-0 gVgAcJ"
   >
     <thead>
       <tr>
