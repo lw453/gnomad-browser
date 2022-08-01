@@ -183,17 +183,17 @@ const TopPanel = styled.div`
   margin-bottom: 5px;
 `
 
-const RegionalConstraintTrack = ({ constrainedRegions, exons }) => {
+const RegionalConstraintTrack = ({ constrainedRegions, exons, title }) => {
   const constrainedExons = regionIntersections([
     constrainedRegions,
     exons.filter(exon => exon.feature_type === 'CDS'),
   ])
   return (
-    <Wrapper>
+    <Wrapper style={{ marginTop: '1em' }}>
       <Track
         renderLeftPanel={() => (
           <SidePanel>
-            <span>Regional missense constraint</span>
+            <span>{title || 'Regional missense constraint'}</span>
             <InfoButton topic="regional-constraint" />
           </SidePanel>
         )}
