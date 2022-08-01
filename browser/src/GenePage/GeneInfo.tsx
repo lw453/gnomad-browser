@@ -34,7 +34,6 @@ const ManeSelectTranscriptId = ({ gene }: ManeSelectTranscriptIdProps) => {
   return (
     <React.Fragment>
       {shouldLinkToTranscriptPage ? (
-        // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
         <Link to={`/transcript/${gene.mane_select_transcript.ensembl_id}`}>
           {gene.mane_select_transcript.ensembl_id}.{gene.mane_select_transcript.ensembl_version}
         </Link>
@@ -128,7 +127,6 @@ const GeneInfo = ({ gene }: GeneInfoProps) => {
         }
       >
         {canonicalTranscript ? (
-          // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
           <Link to={`/transcript/${canonicalTranscript.transcript_id}`}>
             {canonicalTranscript.transcript_id}.{canonicalTranscript.transcript_version}
           </Link>
@@ -142,7 +140,6 @@ const GeneInfo = ({ gene }: GeneInfoProps) => {
         <AttributeList.Item label="Other transcripts">
           <InlineList
             items={otherTranscripts.map((transcript) => (
-              // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
               <Link to={`/transcript/${transcript.transcript_id}`}>
                 {transcript.transcript_id}.{transcript.transcript_version}
               </Link>
@@ -154,7 +151,6 @@ const GeneInfo = ({ gene }: GeneInfoProps) => {
 
       {/* @ts-expect-error TS(2604) FIXME: JSX element type 'AttributeList.Item' does not hav... Remove this comment to see the full error message */}
       <AttributeList.Item label="Region">
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/region/${gene.chrom}-${gene.start}-${gene.stop}`}>
           {gene.chrom}:{gene.start}-{gene.stop}
         </Link>

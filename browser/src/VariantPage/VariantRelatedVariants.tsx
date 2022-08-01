@@ -92,7 +92,6 @@ const VariantRelatedVariants = ({ datasetId, variant }: VariantRelatedVariantsPr
           <ul>
             {variant.colocated_variants.map((colocatedVariantId) => (
               <li key={colocatedVariantId}>
-                {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                 <Link to={`/variant/${colocatedVariantId}`}>{colocatedVariantId}</Link>
               </li>
             ))}
@@ -121,7 +120,6 @@ const VariantRelatedVariants = ({ datasetId, variant }: VariantRelatedVariantsPr
         <Item>
           <h3>Variant Co-occurrence</h3>
           <p>
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link
               to={{
                 pathname: '/variant-cooccurrence',
@@ -137,7 +135,6 @@ const VariantRelatedVariants = ({ datasetId, variant }: VariantRelatedVariantsPr
       <Item>
         <h3>Nearby Variants</h3>
         <p>
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to={`/region/${getLocusWindow(variant, 20)}`}>
             View variants located within 20 bases of this variant.
           </Link>

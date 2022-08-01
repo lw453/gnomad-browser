@@ -184,7 +184,7 @@ export default () => (
         <ExternalLink href="https://gnomad.broadinstitute.org/news/2021-10-gnomad-v3-1-2-minor-release/">
           gnomAD v3.1.2 blog post
         </ExternalLink>{' '}
-        and the {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
+        and the
         <Link to="/help/hgdp-1kg-annotations">
           HGDP + 1KG dense MatrixTable annotation descriptions
         </Link>

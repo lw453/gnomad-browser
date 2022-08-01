@@ -64,7 +64,6 @@ const VariantCooccurrenceDetailsTable = ({
           <tr>
             <td colSpan={2} />
             <th colSpan={3} scope="colgroup">
-              {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
               <Link to={`/variant/${variantIds[1]}`}>
                 {variant2.chrom}-{variant2.pos}-{truncate(variant2.ref)}-{truncate(variant2.alt)}
               </Link>
@@ -86,7 +85,6 @@ const VariantCooccurrenceDetailsTable = ({
           </tr>
           <tr>
             <th rowSpan={3} scope="rowgroup">
-              {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
               <Link to={`/variant/${variantIds[0]}`}>
                 {variant1.chrom}-{variant1.pos}-{truncate(variant1.ref)}-{truncate(variant1.alt)}
               </Link>

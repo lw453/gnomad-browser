@@ -253,7 +253,6 @@ const GnomadConstraintTable = ({ constraint }: GnomadConstraintTableProps) => {
             </p>
           ))}
           <p>
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link
               preserveSelectedDataset={false}
               to="/help/why-are-constraint-metrics-missing-for-this-gene-or-annotated-with-a-note"

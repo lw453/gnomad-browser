@@ -83,7 +83,6 @@ const ConstraintTable = ({ datasetId, geneOrTranscript }: Props) => {
         {isGene && (
           <p>
             Constraint metrics based on {transcriptDescription} transcript (
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link to={`/transcript/${transcriptId}`}>
               {transcriptId}.{transcriptVersion}
             </Link>
@@ -107,7 +106,6 @@ const ConstraintTable = ({ datasetId, geneOrTranscript }: Props) => {
       {isGene && (
         <p style={{ marginBottom: 0 }}>
           Constraint metrics based on {transcriptDescription} transcript (
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to={`/transcript/${transcriptId}`}>
             {transcriptId}.{transcriptVersion}
           </Link>

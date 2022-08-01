@@ -26,10 +26,7 @@ const MNVConsequenceList = ({ variant }: Props) => (
   <List>
     {variant.consequences.map((consequence) => (
       <ListItem key={(consequence as any).gene_id}>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
-        <Link to={`/gene/${(consequence as any).gene_id}`}>
-          {(consequence as any).gene_name}
-        </Link> - {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
+        <Link to={`/gene/${(consequence as any).gene_id}`}>{(consequence as any).gene_name}</Link> -
         <Link to={`/transcript/${(consequence as any).transcript_id}`}>
           {(consequence as any).transcript_id}
         </Link>

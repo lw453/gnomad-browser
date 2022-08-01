@@ -29,7 +29,6 @@ const HelpTopicPage = ({ topicId }: Props) => {
         <>
           <p>Topic not found</p>
           <p>
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link to="/help">See all help topics</Link>
           </p>
         </>

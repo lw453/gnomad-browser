@@ -130,7 +130,6 @@ const ShortTandemRepeatAttributes = ({ shortTandemRepeat }: ShortTandemRepeatAtt
     <AttributeList style={{ marginTop: '1.25em' }}>
       {/* @ts-expect-error TS(2604) FIXME: JSX element type 'AttributeList.Item' does not hav... Remove this comment to see the full error message */}
       <AttributeList.Item label="Gene">
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/gene/${shortTandemRepeat.gene.ensembl_id}`}>
           {shortTandemRepeat.gene.symbol}
         </Link>
@@ -139,7 +138,6 @@ const ShortTandemRepeatAttributes = ({ shortTandemRepeat }: ShortTandemRepeatAtt
       <AttributeList.Item label="Gene region">{shortTandemRepeat.gene.region}</AttributeList.Item>
       {/* @ts-expect-error TS(2604) FIXME: JSX element type 'AttributeList.Item' does not hav... Remove this comment to see the full error message */}
       <AttributeList.Item label="Reference region">
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           to={`/region/${shortTandemRepeat.reference_region.chrom}-${shortTandemRepeat.reference_region.start}-${shortTandemRepeat.reference_region.stop}`}
         >

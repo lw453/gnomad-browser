@@ -83,7 +83,6 @@ const TranscriptInfo = ({ transcript }: TranscriptInfoProps) => {
       </AttributeList.Item>
       {/* @ts-expect-error TS(2604) FIXME: JSX element type 'AttributeList.Item' does not hav... Remove this comment to see the full error message */}
       <AttributeList.Item label="Gene">
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/gene/${transcript.gene.gene_id}`}>
           {transcript.gene.symbol} ({transcript.gene.gene_id}.{transcript.gene.gene_version})
         </Link>
@@ -108,7 +107,6 @@ const TranscriptInfo = ({ transcript }: TranscriptInfoProps) => {
       </AttributeList.Item>
       {/* @ts-expect-error TS(2604) FIXME: JSX element type 'AttributeList.Item' does not hav... Remove this comment to see the full error message */}
       <AttributeList.Item label="Region">
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/region/${transcript.chrom}-${transcript.start}-${transcript.stop}`}>
           {transcript.chrom}:{transcript.start}-{transcript.stop}
         </Link>

@@ -38,7 +38,6 @@ const VariantNotFound = withSize()(({ datasetId, size: { width }, variantId }) =
         Variant not found
         <br />
         <br />
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/region/${redirectRegion}`}>View surrounding region</Link>
       </StatusMessage>
       <RegionViewer regions={regionViewerRegions} rightPanelWidth={0} width={width}>

@@ -428,7 +428,6 @@ export const GnomadVariantOccurrenceTable = ({
       {showHighAlleleBalanceWarning && (
         <p>
           <Badge level="warning">Warning</Badge> {highAlleleBalanceWarningMessage}{' '}
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to="/help/why-are-some-variants-depleted-for-homozygotes-out-of-hardy-weinberg-equilibrium">
             More details.
           </Link>

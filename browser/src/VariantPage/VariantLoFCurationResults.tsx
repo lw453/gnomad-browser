@@ -24,7 +24,6 @@ const LoFCurationResult = ({ result }: LoFCurationResultProps) => {
   const publication = PROJECT_PUBLICATIONS[project]
   return (
     <>
-      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
       <Link to={`/gene/${result.gene_id}`}>{result.gene_symbol || result.gene_id}</Link>
       <div>Curated as {verdict}</div>
       {flags.length > 0 && <div>Contributing factors: {flags.join(', ')}</div>}

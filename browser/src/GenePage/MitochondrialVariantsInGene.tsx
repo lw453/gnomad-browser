@@ -89,7 +89,6 @@ const MitochondrialVariantsInGene = ({ datasetId, gene, zoomRegion, ...rest }: P
         Mitochondrial variants are not available in {labelForDataset(datasetId)}
         <br />
         <br />
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/gene/${gene.gene_id}?dataset=gnomad_r3`} preserveSelectedDataset={false}>
           View this gene in gnomAD v3.1 to see mitochondrial variants
         </Link>

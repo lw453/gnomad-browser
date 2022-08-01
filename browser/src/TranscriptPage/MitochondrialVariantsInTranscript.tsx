@@ -93,7 +93,6 @@ const MitochondrialVariantsInTranscript = ({
         Mitochondrial variants are not available in {labelForDataset(datasetId)}
         <br />
         <br />
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           to={`/transcript/${transcript.transcript_id}?dataset=gnomad_r3`}
           preserveSelectedDataset={false}

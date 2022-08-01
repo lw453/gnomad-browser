@@ -134,7 +134,6 @@ const GeneTranscriptsTrack = ({
               )
             : ({ transcript }: any) => (
                 <TranscriptLabel>
-                  {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                   <Link to={`/transcript/${transcript.transcript_id}`}>
                     {transcript.transcript_id}.{transcript.transcript_version}
                     {transcript.transcript_id === preferredTranscriptId && '*'}

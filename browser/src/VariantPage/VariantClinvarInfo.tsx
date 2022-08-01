@@ -90,10 +90,8 @@ const VariantClinvarInfo = ({ variant }: VariantClinvarInfoProps) => {
   const [isSubmissionsModalOpen, setIsSubmissionsModalOpen] = useState(false)
 
   const conditions = variant.clinvar.submissions
-    // @ts-expect-error TS(2550) FIXME: Property 'flatMap' does not exist on type '{ clini... Remove this comment to see the full error message
     .flatMap((submission: any) => submission.conditions)
     .reduce(
-      // @ts-expect-error TS(7006) FIXME: Parameter 'acc' implicitly has an 'any' type.
       (acc, condition) => ({
         ...acc,
         [`${condition.medgen_id}-${condition.name}`]: condition,

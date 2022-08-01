@@ -70,7 +70,6 @@ type TranscriptsPlotProps = {
 const TranscriptsPlot = ({ transcripts, width }: TranscriptsPlotProps) => {
   const composite = mergeOverlappingRegions(
     transcripts
-      // @ts-expect-error TS(2550) FIXME: Property 'flatMap' does not exist on type '{ trans... Remove this comment to see the full error message
       .flatMap((transcript: any) => transcript.exons)
       .filter((exon: any) => exon.feature_type !== 'UTR')
       .map((exon: any) => ({

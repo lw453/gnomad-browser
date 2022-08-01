@@ -67,7 +67,6 @@ class StructuralVariantConsequenceList extends Component<Props, State> {
                   {genes.slice(0, 3).map((gene) => (
                     // @ts-expect-error TS(2769) FIXME: No overload matches this call.
                     <ListItem key={gene}>
-                      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                       <Link to={`/gene/${gene}`}>{gene}</Link>
                     </ListItem>
                   ))}
@@ -104,7 +103,6 @@ class StructuralVariantConsequenceList extends Component<Props, State> {
                 .genes.map((gene: any) => (
                   // @ts-expect-error TS(2769) FIXME: No overload matches this call.
                   <ListItem key={gene}>
-                    {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                     <Link to={`/gene/${gene}`}>{gene}</Link>
                   </ListItem>
                 ))}

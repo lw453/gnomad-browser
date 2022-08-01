@@ -47,7 +47,6 @@ const GeneNotFound = ({ datasetId, geneIdOrSymbol }: Props) => {
                 {data.gene_search
                   .flatMap((gene: any) => [
                     ', ',
-                    // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
                     <Link
                       key={gene.ensembl_id}
                       to={`/gene/${gene.ensembl_id}?dataset=${datasetId}`}

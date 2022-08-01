@@ -102,7 +102,6 @@ const TranscriptPageContainer = ({ datasetId, transcriptId }: Props) => (
 
       // Cannot query structural variants by transcript, redirect to gene page
       if (datasetId.startsWith('gnomad_sv')) {
-        // @ts-expect-error TS(2786) FIXME: 'Redirect' cannot be used as a JSX component.
         return <Redirect to={`/gene/${transcript.gene.gene_id}?dataset=${datasetId}`} />
       }
 

@@ -88,7 +88,6 @@ const VariantsInTranscript = ({
             </Badge>{' '}
             Only variants located in or within 75 base pairs of a coding exon are shown here. To see
             variants in UTRs or introns, use the{' '}
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link to={`/region/${transcript.chrom}-${transcript.start}-${transcript.stop}`}>
               region view
             </Link>
@@ -98,7 +97,6 @@ const VariantsInTranscript = ({
           <p>
             <Badge level="info">Note</Badge> Only variants located in or within 75 base pairs of an
             exon are shown here. To see variants in introns, use the{' '}
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link to={`/region/${transcript.chrom}-${transcript.start}-${transcript.stop}`}>
               region view
             </Link>

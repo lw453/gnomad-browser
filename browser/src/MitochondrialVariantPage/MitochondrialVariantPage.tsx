@@ -322,7 +322,6 @@ const ConnectedMitochondrialVariantPage = ({
         Mitochondrial variants are not available in {labelForDataset(datasetId)}
         <br />
         <br />
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/variant/${variantId}?dataset=gnomad_r3`} preserveSelectedDataset={false}>
           Search for this variant in gnomAD v3
         </Link>

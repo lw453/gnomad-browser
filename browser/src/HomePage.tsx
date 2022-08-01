@@ -40,7 +40,6 @@ export default () => (
       <Heading>Genome Aggregation Database</Heading>
     </HeadingContainer>
 
-    {/* @ts-expect-error TS(2786) FIXME: 'Searchbox' cannot be used as a JSX component. */}
     <Searchbox width="100%" />
 
     <div
@@ -67,17 +66,14 @@ export default () => (
     <List style={{ marginBottom: '2em' }}>
       {/* @ts-expect-error TS(2745) FIXME: This JSX tag's 'children' prop expects type 'never... Remove this comment to see the full error message */}
       <ListItem>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to="/variant-cooccurrence">Find co-occurrence of two variants</Link>
       </ListItem>
       {/* @ts-expect-error TS(2745) FIXME: This JSX tag's 'children' prop expects type 'never... Remove this comment to see the full error message */}
       <ListItem>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to="/downloads">Download gnomAD data</Link>
       </ListItem>
       {/* @ts-expect-error TS(2745) FIXME: This JSX tag's 'children' prop expects type 'never... Remove this comment to see the full error message */}
       <ListItem>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to="/publications">Read gnomAD publications</Link>
       </ListItem>
     </List>
@@ -85,7 +81,6 @@ export default () => (
     <p>
       Please note that gnomAD v2.1.1 and v3.1.2 have substantially different but overlapping sample
       compositions and are on different genome builds. For more information, see{' '}
-      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
       <Link to="/help/should-i-switch-to-the-latest-version-of-gnomad">
         &quot;Should I switch to the latest version of gnomAD?&quot;
       </Link>
@@ -96,7 +91,7 @@ export default () => (
     <List>
       {/* @ts-expect-error TS(2746) FIXME: This JSX tag's 'children' prop expects a single ch... Remove this comment to see the full error message */}
       <ListItem>
-        Gene: {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
+        Gene:
         <Link preserveSelectedDataset={false} to="/gene/ENSG00000169174">
           PCSK9
         </Link>
@@ -104,7 +99,6 @@ export default () => (
       {/* @ts-expect-error TS(2746) FIXME: This JSX tag's 'children' prop expects a single ch... Remove this comment to see the full error message */}
       <ListItem>
         Transcript:{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link preserveSelectedDataset={false} to="/transcript/ENST00000302118">
           ENST00000302118
         </Link>
@@ -112,7 +106,6 @@ export default () => (
       {/* @ts-expect-error TS(2746) FIXME: This JSX tag's 'children' prop expects a single ch... Remove this comment to see the full error message */}
       <ListItem>
         gnomAD v3.1.2 variant:{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           preserveSelectedDataset={false}
           to={{
@@ -126,7 +119,6 @@ export default () => (
       {/* @ts-expect-error TS(2746) FIXME: This JSX tag's 'children' prop expects a single ch... Remove this comment to see the full error message */}
       <ListItem>
         gnomAD v3 mitochondrial variant:{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           preserveSelectedDataset={false}
           to={{
@@ -144,7 +136,7 @@ export default () => (
         <ExternalLink href="https://gnomad.broadinstitute.org/short-tandem-repeats?dataset=gnomad_r3">
           short tandem repeat
         </ExternalLink>{' '}
-        locus: {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
+        locus:
         <Link
           preserveSelectedDataset={false}
           to={{
@@ -158,7 +150,6 @@ export default () => (
       {/* @ts-expect-error TS(2746) FIXME: This JSX tag's 'children' prop expects a single ch... Remove this comment to see the full error message */}
       <ListItem>
         gnomAD v2.1.1 variant:{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           preserveSelectedDataset={false}
           to={{
@@ -172,7 +163,6 @@ export default () => (
       {/* @ts-expect-error TS(2746) FIXME: This JSX tag's 'children' prop expects a single ch... Remove this comment to see the full error message */}
       <ListItem>
         gnomAD v2 structural variant:{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           preserveSelectedDataset={false}
           to={{
@@ -186,7 +176,6 @@ export default () => (
       {/* @ts-expect-error TS(2746) FIXME: This JSX tag's 'children' prop expects a single ch... Remove this comment to see the full error message */}
       <ListItem>
         Variant co-occurrence:{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           preserveSelectedDataset={false}
           to={{
@@ -242,7 +231,7 @@ export default () => (
     <h2>About gnomAD</h2>
 
     <p>
-      The {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
+      The
       <Link preserveSelectedDataset={false} to="/about">
         Genome Aggregation Database
       </Link>{' '}
@@ -262,7 +251,6 @@ export default () => (
       </ExternalLink>
       , selected as in v2. The gnomAD Principal Investigators and groups that have contributed data
       to the current release are listed{' '}
-      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
       <Link preserveSelectedDataset={false} to="/about">
         here
       </Link>
@@ -271,7 +259,6 @@ export default () => (
     <p>
       All data here are released for the benefit of the wider biomedical community, without
       restriction on use - see the{' '}
-      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
       <Link preserveSelectedDataset={false} to="/terms">
         terms of use
       </Link>

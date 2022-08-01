@@ -367,7 +367,6 @@ const VariantCoocurrenceContainer = ({
                   {multiNucleotideVariants.map((mnv: any) => (
                     // @ts-expect-error TS(2769) FIXME: No overload matches this call.
                     <ListItem key={mnv.combined_variant_id}>
-                      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                       <Link to={`/variant/${mnv.combined_variant_id}`}>
                         {mnv.combined_variant_id}
                       </Link>
@@ -386,12 +385,10 @@ const VariantCoocurrenceContainer = ({
                 {genesInCommon.size === 1 ? '' : 's'}:{' '}
                 {Array.from(genesInCommon)
                   .map((geneId: any) => (
-                    // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
                     <Link key={geneId} to={`/gene/${geneId}`}>
                       {geneSymbols[geneId]}
                     </Link>
                   ))
-                  // @ts-expect-error TS(2550) FIXME: Property 'flatMap' does not exist on type 'Element... Remove this comment to see the full error message
                   .flatMap((el: any) => [', ', el])
                   .slice(1)}
                 . Only annotations for {genesInCommon.size === 1 ? 'this gene' : 'these genes'} are
@@ -400,7 +397,6 @@ const VariantCoocurrenceContainer = ({
               <Wrapper>
                 <ResponsiveSection>
                   <h3>
-                    {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                     <Link to={`/variant/${variantIds[0]}`}>{variantIds[0]}</Link>
                   </h3>
                   <TranscriptConsequenceList
@@ -412,7 +408,6 @@ const VariantCoocurrenceContainer = ({
 
                 <ResponsiveSection>
                   <h3>
-                    {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                     <Link to={`/variant/${variantIds[1]}`}>{variantIds[1]}</Link>
                   </h3>
                   <TranscriptConsequenceList
@@ -511,7 +506,6 @@ const VariantCoocurrencePage = ({ datasetId }: VariantCoocurrencePageProps) => {
           Variant co-occurrence is only available for gnomAD v2.1.1
           <br />
           <br />
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to={`${location.pathname}?dataset=gnomad_r2_1`} preserveSelectedDataset={false}>
             View variant co-occurrence in gnomAD v2.1.1
           </Link>

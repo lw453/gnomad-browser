@@ -61,7 +61,6 @@ const ShortTandemRepeatGenotypeDistributionBinDetails = ({
                   selectedRepeatUnits: repeatUnits.join(' / '),
                 }),
               }))
-              // @ts-expect-error TS(2550) FIXME: Property 'flatMap' does not exist on type '{ repea... Remove this comment to see the full error message
               .flatMap(({ repeatUnits, distribution }: any) => [
                 {
                   repeatUnits,

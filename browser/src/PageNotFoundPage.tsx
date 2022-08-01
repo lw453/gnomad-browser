@@ -12,7 +12,6 @@ const PageNotFoundPage = () => (
     <PageHeading>Page Not Found</PageHeading>
     <p>
       This page does not exist. Try searching for a gene, region, or variant or go to the{' '}
-      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
       <Link preserveSelectedDataset={false} to="/">
         home page
       </Link>

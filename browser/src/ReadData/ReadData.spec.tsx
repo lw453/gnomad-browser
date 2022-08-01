@@ -41,7 +41,6 @@ jest.mock('./IGVBrowser', () => () => null)
 describe.each(allDatasetIds)('ReadData with "%s" dataset selected', (datasetId: any) => {
   test('has no unexpected changes', () => {
     const tree = renderer.create(
-      // @ts-expect-error TS(2786) FIXME: 'Router' cannot be used as a JSX component.
       <Router history={createBrowserHistory()}>
         <ReadDataContainer datasetId={datasetId} variantIds={[variantId]} />
       </Router>

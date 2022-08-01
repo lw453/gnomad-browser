@@ -96,7 +96,6 @@ const NavBar = () => {
         </Link>
         <ToggleMenuButton onClick={toggleMenu}>☰</ToggleMenuButton>
       </LogoWrapper>
-      {/* @ts-expect-error TS(2786) FIXME: 'Searchbox' cannot be used as a JSX component. */}
       <Searchbox id="navbar-search" placeholder="Search" width="360px" />
       {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
       <Menu isExpanded={isMenuExpanded}>

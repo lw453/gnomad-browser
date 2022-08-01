@@ -109,7 +109,6 @@ const mitochondrialVariantTableColumns = [
         <ExternalLink
           href={`https://www.ncbi.nlm.nih.gov/clinvar/variation/${variant.clinvar_variation_id}/`}
         >
-          {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
           <Highlighter
             autoEscape
             searchWords={highlightWords}
@@ -133,7 +132,6 @@ const mitochondrialVariantTableColumns = [
     render: (row: any, key: any, { highlightWords }: any) => (
       <Cell>
         <VariantCategoryMarker color={getConsequenceColor(row[key])} />
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -162,7 +160,6 @@ const mitochondrialVariantTableColumns = [
     minWidth: 100,
     render: (row: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/gene/${row.gene_id}`}>{row.gene_symbol || row.gene_id}</Link>
       </Cell>
     ),
@@ -183,7 +180,6 @@ const mitochondrialVariantTableColumns = [
     getSearchTerms: (variant: any) => [variant.hgvsp || variant.hgvsc],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -205,7 +201,6 @@ const mitochondrialVariantTableColumns = [
     getSearchTerms: (variant: any) => [variant.hgvsc],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -227,7 +222,6 @@ const mitochondrialVariantTableColumns = [
     getSearchTerms: (variant: any) => [variant.hgvsp],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -267,9 +261,7 @@ const mitochondrialVariantTableColumns = [
     getSearchTerms: (variant: any) => [variant.variant_id],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link target="_blank" to={`/variant/${variant.variant_id}`}>
-          {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
           <Highlighter
             autoEscape
             searchWords={highlightWords}

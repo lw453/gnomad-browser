@@ -47,7 +47,6 @@ const ShortTandemRepeatsPage = ({ shortTandemRepeats }: ShortTandemRepeatsPagePr
             return (
               <tr key={shortTandemRepeat.id}>
                 <th scope="row" style={{ whiteSpace: 'nowrap' }}>
-                  {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                   <Link to={`/short-tandem-repeat/${shortTandemRepeat.id}`}>
                     {shortTandemRepeat.id}
                   </Link>
@@ -79,7 +78,6 @@ const ShortTandemRepeatsPage = ({ shortTandemRepeats }: ShortTandemRepeatsPagePr
                         </React.Fragment>
                       )
                     })
-                    // @ts-expect-error TS(2550) FIXME: Property 'flatMap' does not exist on type 'Element... Remove this comment to see the full error message
                     .flatMap((el: any) => [', ', el])
                     .slice(1)}
                 </td>
@@ -157,7 +155,6 @@ const ShortTandemRepeatsPageContainer = ({ datasetId }: ShortTandemRepeatsPageCo
           Short tandem repeats are not available in {labelForDataset(datasetId)}
           <br />
           <br />
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to="/short-tandem-repeats?dataset=gnomad_r3" preserveSelectedDataset={false}>
             View short tandem repeats in gnomAD v3.1
           </Link>

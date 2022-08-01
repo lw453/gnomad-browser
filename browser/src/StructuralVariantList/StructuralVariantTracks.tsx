@@ -40,7 +40,6 @@ const Row = ({
   const variant = variants[index]
   return (
     <div style={style}>
-      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
       <Link
         target="_blank"
         to={`/variant/${variant.variant_id}`}
@@ -93,7 +92,6 @@ const StructuralVariantTracks = ({
   >
     <Track>
       {({ isPositionDefined, scalePosition, width }: any) => (
-        // @ts-expect-error TS(2786) FIXME: 'FixedSizeList' cannot be used as a JSX component.
         <FixedSizeList
           ref={forwardedRef}
           height={numTracksRendered * trackHeight}

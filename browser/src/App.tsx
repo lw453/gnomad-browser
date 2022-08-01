@@ -98,10 +98,8 @@ const App = () => {
   }, [])
 
   return (
-    // @ts-expect-error TS(2786) FIXME: 'Router' cannot be used as a JSX component.
     <Router>
       {/* On any navigation, send event to Google Analytics. */}
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route path="/" component={GoogleAnalytics} />
 
       {/**
@@ -109,7 +107,6 @@ const App = () => {
        * If the page's module is already loaded, scrolling is handled by this router's render function. If the page's
        * module is loaded by Suspense, scrolling is handled by the useEffect hook in the PageLoading component.
        */}
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         path="/"
         // @ts-expect-error TS(2769) FIXME: No overload matches this call.
@@ -118,7 +115,6 @@ const App = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'ErrorBoundary' cannot be used as a JSX component. */}
       <ErrorBoundary>
         {isLoading ? (
           <Delayed>

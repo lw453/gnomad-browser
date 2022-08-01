@@ -159,7 +159,6 @@ const MitochondrialVariantGenotypeQualityFilters = ({
       <p>
         Note: This plot may include low-quality genotypes that were excluded from allele counts in
         the tables above.{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to="/help/what-are-the-meanings-of-the-mitochondrial-specific-filters-and-flags">
           More information.
         </Link>

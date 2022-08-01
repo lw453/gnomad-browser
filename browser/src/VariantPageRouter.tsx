@@ -40,7 +40,6 @@ const VariantSearch = ({ datasetId, query }: VariantSearchProps) => {
 
   if ((matchingVariants as any).length === 1) {
     return (
-      // @ts-expect-error TS(2786) FIXME: 'Redirect' cannot be used as a JSX component.
       <Redirect
         to={{
           pathname: `/variant/${matchingVariants[0]}`,
@@ -58,7 +57,6 @@ const VariantSearch = ({ datasetId, query }: VariantSearchProps) => {
         {(matchingVariants as any).map((variantId: any) => (
           // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <ListItem key={variantId}>
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link
               to={{
                 pathname: `/variant/${variantId}`,

@@ -75,7 +75,6 @@ const RegionPage = ({ datasetId, region }: Props) => {
           title={`${region.chrom}-${region.start}-${region.stop} | ${labelForDataset(datasetId)}`}
         />
         <GnomadPageHeading
-          // @ts-expect-error TS(2786) FIXME: 'EditRegion' cannot be used as a JSX component.
           extra={<EditRegion initialRegion={region} style={{ marginLeft: '1em' }} />}
           selectedDataset={datasetId}
           datasetOptions={{
@@ -95,7 +94,6 @@ const RegionPage = ({ datasetId, region }: Props) => {
             {region.short_tandem_repeats && region.short_tandem_repeats.length > 0 && (
               <p>
                 <Badge level="info">Note</Badge> This region contains a pathogenic{' '}
-                {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                 <Link to={`/short-tandem-repeat/${region.short_tandem_repeats[0].id}`}>
                   short tandem repeat
                 </Link>
@@ -104,7 +102,6 @@ const RegionPage = ({ datasetId, region }: Props) => {
             )}
           </div>
           <RegionControlsWrapper>
-            {/* @ts-expect-error TS(2786) FIXME: 'RegionControls' cannot be used as a JSX component... Remove this comment to see the full error message */}
             <RegionControls region={region} />
           </RegionControlsWrapper>
         </RegionInfoColumnWrapper>

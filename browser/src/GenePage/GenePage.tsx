@@ -281,7 +281,6 @@ const GenePage = ({ datasetId, gene, geneId }: Props) => {
             {gene.short_tandem_repeats && gene.short_tandem_repeats.length > 0 && (
               <p>
                 <Badge level="info">Note</Badge> This gene contains a pathogenic{' '}
-                {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                 <Link to={`/short-tandem-repeat/${gene.short_tandem_repeats[0].id}`}>
                   short tandem repeat
                 </Link>

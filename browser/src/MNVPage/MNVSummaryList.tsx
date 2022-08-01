@@ -27,7 +27,6 @@ const MNVSummaryList = ({ multiNucleotideVariants }: Props) => (
         This variant is found in phase with{' '}
         {mnv.other_constituent_snvs
           .map((snv) => (
-            // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
             <Link key={snv} to={`/variant/${snv}`}>
               {snv}
             </Link>
@@ -37,7 +36,6 @@ const MNVSummaryList = ({ multiNucleotideVariants }: Props) => (
         {/* @ts-expect-error TS(2551) FIXME: Property 'individuals' does not exist on type '{ c... Remove this comment to see the full error message */}
         in {mnv.n_individuals} individual{mnv.individuals !== 1 && 's'}
         {mnv.changes_amino_acids && ', altering the amino acid sequence'}.{' '}
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           to={`/variant/${mnv.combined_variant_id}?dataset=gnomad_r2_1`}
           preserveSelectedDataset={false}

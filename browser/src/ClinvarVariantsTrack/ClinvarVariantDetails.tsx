@@ -151,10 +151,8 @@ const ClinvarVariantDetails = ({
   clinvarReleaseDate,
 }: ClinvarVariantDetailsProps) => {
   const conditions = clinvarVariant.submissions
-    // @ts-expect-error TS(2550) FIXME: Property 'flatMap' does not exist on type '{ clini... Remove this comment to see the full error message
     .flatMap((submission: any) => submission.conditions)
     .reduce(
-      // @ts-expect-error TS(7006) FIXME: Parameter 'acc' implicitly has an 'any' type.
       (acc, condition) => ({
         ...acc,
         [`${condition.medgen_id}-${condition.name}`]: condition,
@@ -229,7 +227,6 @@ const ClinvarVariantDetails = ({
           <h3>gnomAD</h3>
 
           <p>
-            {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
             <Link target="_blank" to={`/variant/${clinvarVariant.variant_id}`}>
               View all gnomAD data for this variant
             </Link>

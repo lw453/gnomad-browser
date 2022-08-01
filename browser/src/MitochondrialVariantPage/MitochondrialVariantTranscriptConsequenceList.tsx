@@ -41,7 +41,6 @@ const ConsequencesInGene = ({ transcriptConsequences, variant }: ConsequencesInG
       {transcriptConsequences.slice(0, 3).map((csq) => (
         // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         <ListItem key={csq.transcript_id}>
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to={`/transcript/${csq.transcript_id}`}>
             {csq.transcript_id}.{csq.transcript_version}
           </Link>
@@ -93,7 +92,6 @@ const MitochondrialVariantTranscriptConsequenceList = ({
                   // @ts-expect-error TS(2769) FIXME: No overload matches this call.
                   <ListItem key={geneId}>
                     <h4>
-                      {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
                       <Link to={`/gene/${geneId}`}>{geneSymbol}</Link>
                     </h4>
                     <ConsequencesInGene

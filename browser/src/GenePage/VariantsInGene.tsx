@@ -40,7 +40,6 @@ const TranscriptsModal = ({ gene, onRequestClose }: TranscriptsModalProps) => (
       {gene.transcripts.map((transcript) => (
         // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         <ListItem key={transcript.transcript_id}>
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to={`/transcript/${transcript.transcript_id}`}>
             {transcript.transcript_id}.{transcript.transcript_version}
           </Link>
@@ -136,7 +135,6 @@ const VariantsInGene = ({
           </Badge>{' '}
           Only variants located in or within 75 base pairs of a coding exon are shown here. To see
           variants in UTRs or introns, use the{' '}
-          {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
           <Link to={`/region/${gene.chrom}-${gene.start}-${gene.stop}`}>region view</Link>.
         </p>
         <p>

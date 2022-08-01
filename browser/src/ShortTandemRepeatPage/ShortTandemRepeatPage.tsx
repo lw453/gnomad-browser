@@ -170,7 +170,6 @@ const ShortTandemRepeatPage = ({ datasetId, shortTandemRepeat }: ShortTandemRepe
             </List>
             <h2>Related Loci</h2>
             <p>
-              {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
               <Link to="/short-tandem-repeats">All pathogenic short tandem repeats in gnomAD</Link>
             </p>
           </ResponsiveSection>

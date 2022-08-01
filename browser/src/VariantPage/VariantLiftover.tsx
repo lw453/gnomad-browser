@@ -49,7 +49,6 @@ const VariantLiftover = ({ variant }: Props) => {
                 {l.liftover.variant_id}
                 <br />
                 {l.datasets.includes(liftoverTargetDataset) ? (
-                  // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
                   <Link
                     preserveSelectedDataset={false}
                     to={{
@@ -60,7 +59,6 @@ const VariantLiftover = ({ variant }: Props) => {
                     View variant in {labelForDataset(liftoverTargetDataset)}
                   </Link>
                 ) : (
-                  // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
                   <Link
                     preserveSelectedDataset={false}
                     to={{
@@ -103,7 +101,6 @@ const VariantLiftover = ({ variant }: Props) => {
                 {l.source.variant_id}
                 <br />
                 {l.datasets.includes(liftoverSourceDataset) ? (
-                  // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
                   <Link
                     preserveSelectedDataset={false}
                     to={{
@@ -114,7 +111,6 @@ const VariantLiftover = ({ variant }: Props) => {
                     View variant in {labelForDataset(liftoverSourceDataset)}
                   </Link>
                 ) : (
-                  // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
                   <Link
                     preserveSelectedDataset={false}
                     to={{

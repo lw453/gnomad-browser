@@ -15,7 +15,6 @@ const ShortTandemRepeatAdjacentRepeatAttributes = ({ adjacentRepeat }: Props) =>
     <AttributeList>
       {/* @ts-expect-error TS(2604) FIXME: JSX element type 'AttributeList.Item' does not hav... Remove this comment to see the full error message */}
       <AttributeList.Item label="Reference region">
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link
           to={`/region/${adjacentRepeat.reference_region.chrom}-${adjacentRepeat.reference_region.start}-${adjacentRepeat.reference_region.stop}`}
         >

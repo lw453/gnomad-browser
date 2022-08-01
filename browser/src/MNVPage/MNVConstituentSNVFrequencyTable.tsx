@@ -107,7 +107,6 @@ const MNVConstituentSNVFrequencyTable = ({ snvs }: MNVConstituentSNVFrequencyTab
           {snvs.map((snv) => (
             // @ts-expect-error TS(2322) FIXME: Type 'string' is not assignable to type 'number'.
             <th key={snv.variant_id} colSpan="3" scope="colgroup">
-              {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
               <Link to={`/variant/${snv.variant_id}`}>{snv.variant_id}</Link>
             </th>
           ))}

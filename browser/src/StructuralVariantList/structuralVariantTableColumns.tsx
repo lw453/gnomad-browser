@@ -29,7 +29,6 @@ const renderConsequence = (variant: any, key: any, { colorKey, highlightWords }:
           color={svConsequenceCategoryColors[svConsequenceCategories[consequence] || 'other']}
         />
       )}
-      {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
       <Highlighter autoEscape searchWords={highlightWords} textToHighlight={renderedConsequence} />
     </Cell>
   )
@@ -41,7 +40,6 @@ const renderType = (variant: any, key: any, { colorKey, highlightWords }: any) =
       // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
       <VariantCategoryMarker color={svTypeColors[variant.type] || svTypeColors.OTH} />
     )}
-    {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
     <Highlighter
       autoEscape
       searchWords={highlightWords}
@@ -166,9 +164,7 @@ const structuralVariantTableColumns = [
     getSearchTerms: (variant: any) => [variant.variant_id],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link target="_blank" to={`/variant/${variant.variant_id}`}>
-          {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
           <Highlighter
             autoEscape
             searchWords={highlightWords}

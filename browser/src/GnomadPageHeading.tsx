@@ -99,7 +99,6 @@ const GnomadPageHeading = ({ children, extra, datasetOptions, selectedDataset }:
     </PageHeadingInnerWrapper>
     <PageControlsWrapper>
       <Label>Dataset</Label>
-      {/* @ts-expect-error TS(2786) FIXME: 'DatasetSelector' cannot be used as a JSX componen... Remove this comment to see the full error message */}
       <DatasetSelector datasetOptions={datasetOptions} selectedDataset={selectedDataset} />
       <span>
         <InfoButton topic="dataset-selection" />

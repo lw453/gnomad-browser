@@ -110,7 +110,6 @@ const variantTableColumns = [
         <ExternalLink
           href={`https://www.ncbi.nlm.nih.gov/clinvar/variation/${variant.clinvar_variation_id}/`}
         >
-          {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
           <Highlighter
             autoEscape
             searchWords={highlightWords}
@@ -134,7 +133,6 @@ const variantTableColumns = [
     render: (row: any, key: any, { highlightWords }: any) => (
       <Cell>
         <VariantCategoryMarker color={getConsequenceColor(row[key])} />
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -165,7 +163,6 @@ const variantTableColumns = [
     minWidth: 100,
     render: (row: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/gene/${row.gene_id}`}>{row.gene_symbol || row.gene_id}</Link>
       </Cell>
     ),
@@ -198,7 +195,6 @@ const variantTableColumns = [
     getSearchTerms: (variant: any) => [variant.hgvs],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter autoEscape searchWords={highlightWords} textToHighlight={variant.hgvs || ''} />
       </Cell>
     ),
@@ -216,7 +212,6 @@ const variantTableColumns = [
     getSearchTerms: (variant: any) => [variant.hgvsc],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -238,7 +233,6 @@ const variantTableColumns = [
     getSearchTerms: (variant: any) => [variant.hgvsp],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -308,7 +302,6 @@ const variantTableColumns = [
     getSearchTerms: (variant: any) => variant.rsids || [],
     render: (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter
           autoEscape
           searchWords={highlightWords}
@@ -341,7 +334,6 @@ const variantTableColumns = [
     minWidth: 160,
     render: (row: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link to={`/transcript/${row.transcript_id}`}>
           {row.transcript_id}.{row.transcript_version}
         </Link>
@@ -361,9 +353,7 @@ const variantTableColumns = [
     getSearchTerms: (variant: any) => [variant.variant_id].concat(variant.rsids || []),
     render: (row: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component. */}
         <Link target="_blank" to={`/variant/${row.variant_id}`}>
-          {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
           <Highlighter autoEscape searchWords={highlightWords} textToHighlight={row.variant_id} />
         </Link>
       </Cell>
@@ -406,7 +396,6 @@ export const getColumnsForContext = (context: any) => {
     // @ts-expect-error TS(2339) Property 'hgvs' does not exist on type '{}'.
     columns.hgvs.render = (variant: any, key: any, { highlightWords }: any) => (
       <Cell>
-        {/* @ts-expect-error TS(2786) FIXME: 'Highlighter' cannot be used as a JSX component. */}
         <Highlighter autoEscape searchWords={highlightWords} textToHighlight={variant.hgvs || ''} />
         {primaryTranscriptId && variant.transcript_id !== primaryTranscriptId && ' †'}
       </Cell>

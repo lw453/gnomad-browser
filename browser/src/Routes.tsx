@@ -43,22 +43,17 @@ const Routes = () => {
   // New routes must also be added as a rewrite rule in Nginx configuration.
   // ==================================================================================
   return (
-    // @ts-expect-error TS(2786) FIXME: 'Switch' cannot be used as a JSX component.
     <Switch>
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/" component={HomePage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/gene/:gene/transcript/:transcriptId"
         render={({ location, match }: any) => (
-          // @ts-expect-error TS(2786) FIXME: 'Redirect' cannot be used as a JSX component.
           <Redirect to={{ ...location, pathname: `/transcript/${match.params.transcriptId}` }} />
         )}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/gene/:gene"
@@ -70,7 +65,6 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/region/:regionId"
@@ -94,7 +88,6 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/transcript/:transcriptId"
@@ -111,7 +104,6 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/variant/:variantId"
@@ -123,7 +115,6 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/variant-cooccurrence"
@@ -135,7 +126,6 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/short-tandem-repeats"
@@ -147,7 +137,6 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/short-tandem-repeat/:strId"
@@ -159,53 +148,40 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/about" component={AboutPage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/downloads" component={DownloadsPage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/terms" component={TermsPage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/publications" component={PublicationsPage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/feedback" component={FeedbackPage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/contact" render={() => <Redirect to="/feedback" />} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/mou" component={MOUPage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/faq"
         render={({ location }: any) => {
           if (location.hash) {
-            // @ts-expect-error TS(2786) FIXME: 'Redirect' cannot be used as a JSX component.
             return <Redirect to={`/help/${location.hash.slice(1)}`} />
           }
 
-          // @ts-expect-error TS(2786) FIXME: 'Redirect' cannot be used as a JSX component.
           return <Redirect to={{ pathname: '/help', hash: '#frequently-asked-questions' }} />
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/help/:topic"
         render={({ match }: any) => <HelpTopicPage topicId={match.params.topic} />}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route exact path="/help" component={HelpPage} />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route
         exact
         path="/awesome"
@@ -216,7 +192,6 @@ const Routes = () => {
         }}
       />
 
-      {/* @ts-expect-error TS(2786) FIXME: 'Route' cannot be used as a JSX component. */}
       <Route component={PageNotFoundPage} />
     </Switch>
   )

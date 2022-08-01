@@ -67,7 +67,6 @@ type PointLinkProps = OwnPointLinkProps & typeof PointLink.defaultProps
 
 // @ts-expect-error TS(7022) FIXME: 'PointLink' implicitly has type 'any' because it d... Remove this comment to see the full error message
 const PointLink = ({ chrom, pos, windowSize }: PointLinkProps) => (
-  // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
   <Link to={`/region/${chrom}-${Math.max(pos - windowSize / 2, 0)}-${pos + windowSize / 2}`}>
     {chrom}:{pos}
   </Link>
@@ -163,7 +162,6 @@ const StructuralVariantAttributeList = ({ variant }: StructuralVariantAttributeL
       {variant.type === 'BND' || variant.type === 'CTX' || variant.type === 'INS' ? (
         <PointLink chrom={variant.chrom} pos={variant.pos} />
       ) : (
-        // @ts-expect-error TS(2786) FIXME: 'Link' cannot be used as a JSX component.
         <Link to={`/region/${variant.chrom}-${variant.pos}-${variant.end}`}>
           {variant.chrom}:{variant.pos}-{variant.end}
         </Link>
