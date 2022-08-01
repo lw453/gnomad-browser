@@ -1,6 +1,9 @@
 # 1. Download RMC O/E files
-1. [gnomAD RMC results](gs://regional_missense_constraint/temp/gnomad_all_mc.tsv)
-2. [Exon missense O/E from gnomAD and ExAC](gs://regional_missense_constraint/temp/gnomad_exac_exon_obs_exp.tsv)
+| Description | Location |  
+| :---------- | :------- |  
+| gnomAD RMC results | `gs://regional_missense_constraint/temp/gnomad_all_mc.tsv` |  
+| Exon missense O/E from gnomAD and ExAC | `gs://regional_missense_constraint/temp/gnomad_exac_exon_obs_exp.tsv` |
+
 Change `gnomad_rmc_path` and `exon_rmc_path` in `rmc_development/get_GenePage_rmc_embeds.py` to the local paths for the two files above.
 
 # 2. Load local browser instance
